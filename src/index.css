@@ -1,0 +1,253 @@
+/* リセット・ベーススタイル */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ===== 認証画面共通 ===== */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.auth-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1.8rem;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input {
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #4361ee;
+}
+
+/* ===== ボタン ===== */
+.btn-primary {
+  margin-top: 0.4rem;
+  padding: 0.8rem;
+  background-color: #4361ee;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #3451d1;
+}
+
+.btn-primary:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.btn-logout {
+  padding: 0.45rem 1rem;
+  background-color: transparent;
+  color: #e53e3e;
+  border: 1.5px solid #e53e3e;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-logout:hover {
+  background-color: #e53e3e;
+  color: #fff;
+}
+
+/* ===== メッセージ ===== */
+.error-message {
+  font-size: 0.85rem;
+  color: #e53e3e;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+}
+
+.success-message {
+  font-size: 0.85rem;
+  color: #276749;
+  background: #f0fff4;
+  border: 1px solid #9ae6b4;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+}
+
+/* ===== 認証画面のリンク ===== */
+.auth-link {
+  margin-top: 1.4rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #666;
+}
+
+.auth-link a {
+  color: #4361ee;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===== 物件一覧画面 ===== */
+.properties-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.properties-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.properties-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-email {
+  font-size: 0.88rem;
+  color: #666;
+}
+
+/* ===== 物件カードグリッド ===== */
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.4rem;
+}
+
+.property-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 1.4rem 1.6rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.property-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.property-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.property-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.property-area,
+.property-rent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #888;
+  background: #f0f4ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.rent-amount {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #4361ee;
+}
+
+.rent-amount small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #888;
+  margin-left: 2px;
+}
+
+/* ===== ローディング ===== */
+.loading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #888;
+}

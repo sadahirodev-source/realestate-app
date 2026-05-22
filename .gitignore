@@ -1,0 +1,28 @@
+# 依存パッケージ
+node_modules/
+
+# ビルド成果物
+dist/
+dist-ssr/
+
+# 環境変数（機密情報を含むため除外）
+.env
+.env.local
+.env.*.local
+
+# ログ
+*.log
+npm-debug.log*
+
+# エディタ設定
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS生成ファイル
+.DS_Store
+Thumbs.db
