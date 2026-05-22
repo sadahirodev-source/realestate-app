@@ -214,6 +214,7 @@ body {
 }
 
 .property-area,
+.property-layout,
 .property-rent {
   display: flex;
   justify-content: space-between;
@@ -243,11 +244,170 @@ body {
   margin-left: 2px;
 }
 
+/* ===== カードアクション（編集・削除） ===== */
+.card-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.btn-edit {
+  flex: 1;
+  padding: 0.45rem 0;
+  background: #f0f4ff;
+  color: #4361ee;
+  border: 1.5px solid #c7d2fe;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn-edit:hover {
+  background: #e0e7ff;
+}
+
+.btn-delete {
+  flex: 1;
+  padding: 0.45rem 0;
+  background: #fff5f5;
+  color: #e53e3e;
+  border: 1.5px solid #fed7d7;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn-delete:hover {
+  background: #fee2e2;
+}
+
+/* ===== 新規登録ボタン（ヘッダー） ===== */
+.btn-add {
+  padding: 0.45rem 1rem;
+  background-color: #4361ee;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #3451d1;
+}
+
+/* ===== フォームアクション（キャンセル＋保存） ===== */
+.form-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.4rem;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 0.8rem;
+  background: #f7f7f7;
+  color: #555;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.btn-cancel:hover {
+  background: #efefef;
+}
+
+.form-actions .btn-primary {
+  flex: 1;
+  margin-top: 0;
+}
+
+/* ===== セレクトボックス ===== */
+.form-group select {
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.form-group select:focus {
+  border-color: #4361ee;
+}
+
+/* ===== モーダル ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem 1.8rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
+  animation: modal-in 0.18s ease;
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.modal-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1.4rem;
+}
+
+/* ===== 空状態 ===== */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 4rem 1rem;
+  color: #888;
+}
+
+.empty-text {
+  font-size: 1rem;
+}
+
+.empty-state .btn-primary {
+  width: auto;
+  padding: 0.7rem 1.6rem;
+}
+
 /* ===== ローディング ===== */
 .loading-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 60vh;
   color: #888;
 }
