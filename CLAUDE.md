@@ -56,3 +56,8 @@ VITE_SUPABASE_ANON_KEY=...
 ```
 
 Vite の慣例により、クライアントから参照できる変数は `VITE_` プレフィックスが必要。
+
+## デプロイ情報
+
+- 本番URL：https://realestate-app-self-ten.vercel.app
+- Supabaseプロジェクト名：realestate-app
